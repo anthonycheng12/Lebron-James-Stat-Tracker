@@ -63,31 +63,23 @@ createdAt: // timestamp
 
 ## User Stories or Use Cases
 
-(___TODO__: write out how your application will be used through [user stories](http://en.wikipedia.org/wiki/User_story#Format) and / or [use cases](https://www.mongodb.com/download-center?jmp=docs&_ga=1.47552679.1838903181.1489282706#previous)_)
-
 1. as non-registered user, I can register a new account with the site
 2. as a user, I can log in to the site
-3. as a user, I can create a new grocery list
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
+3. as a user, I can create a player list
+4. as a user, I can view my player list
+5. as a user, I can add players to my player list
+6. as a user, I can delete players of my list
 
 ## Research Topics
 
-(___TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed_)
-
 * (5 points) Integrate user authentication
-* I'm going to be using passport for user authentication
-* And account has been made for testing; I'll email you the password
-* see <code>cs.nyu.edu/~jversoza/ait-final/register</code> for register page
-* see <code>cs.nyu.edu/~jversoza/ait-final/login</code> for login page
-* (4 points) Perform client side form validation using a JavaScript library
-* see <code>cs.nyu.edu/~jversoza/ait-final/my-form</code>
-* if you put in a number that's greater than 5, an error message will appear in the dom
-* (5 points) vue.js
-* used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
+* I will use LoopBack via CLI to create an authentication
+* LoopBack is a highly extensible open source Node.js framework
+* (3 points) Use the NBA JavaScript API to gather statistics
+* see <code>https://github.com/bttmly/nba</code>
 
-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit_)
+
+8 points total out of 8 required points 
 
 
 ## [Link to Initial Main Project File](app.js) 
