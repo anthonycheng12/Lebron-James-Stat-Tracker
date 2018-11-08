@@ -18,3 +18,10 @@ const Player = new mongoose.Schema({
   }, {
     _id: true
   });
+
+const PlayerList = new mongoose.Schema({
+    user: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
+    name: {type: String, required: true},
+    createdAt: {type: Date, required: true},
+    players: [Player]
+  });
