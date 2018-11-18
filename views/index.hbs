@@ -1,0 +1,5 @@
+{{#each articles as |art|}}
+    <ul id="homeList">
+        <li><a href={{art.url}}>{{art.title}}</a> <a href="/article/{{slug}}">details</a></li>
+    </ul>
+{{/each}}
