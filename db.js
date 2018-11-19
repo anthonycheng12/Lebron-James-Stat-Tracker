@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const User = new mongoose.Schema({
     // username provided by authentication plugin
     // password hash provided by authentication plugin
-    lists:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'List' }]
+    username: {type: String, required: true},
+	  email: {type: String, required: true},
+    password: {type: String, unique: true, required: true},
+    lists:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'List', required: false }]
   });
 
 const Player = new mongoose.Schema({

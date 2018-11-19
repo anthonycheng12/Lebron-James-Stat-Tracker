@@ -1,12 +1,33 @@
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
+const NBA = require('nba');
+
+const curry = NBA.findPlayer('Stephen Curry');
+console.log(curry);
+let stats = function(player) {
+    return NBA.stats.playerInfo({ PlayerID: player.playerId });
+}
+let ans = stats(curry);
+
+ans.then(function(res) {
+    console.log(res.playerHeadlineStats[0].pts);
+})
+
+/*function test(callback) {
+    const ans = NBA.stats.playerInfo({ PlayerID: curry.playerId }).then();
+    callback(ans);
+}
+
+test((ans) => {
+    console.log(ans);
+})*/
 
 require('./db');
 const session = require('express-session');
 const path = require('path');
 const auth = require('./auth.js');
 
+const app = express();
 const Player = mongoose.model('Player');
 
 app.set('views', path.join(__dirname, 'views'));

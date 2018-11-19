@@ -1,5 +1,6 @@
-{{#each articles as |art|}}
+{{#each players as |art|}}
     <ul id="homeList">
-        <li><a href={{art.url}}>{{art.title}}</a> <a href="/article/{{slug}}">details</a></li>
+        <li>{{art.firstname}}</li>
     </ul>
+    <!--<a href="/article/{{slug}}">details</a>-->
 {{/each}}
