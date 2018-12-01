@@ -1,18 +1,18 @@
-# NBA Player Tracker
+# LeBron James Tracker
 
 ## Overview
 
-For the average NBA fan it is hard to remember what their favorite players statistics are.
+For the average NBA fan it is hard to remember what LeBron is up too.
 
-NBA Stat Leaders is a web app that will allow users to keep track of their favorite players. Users can type the name of their player and track them. Users should be able to login and have access to all their favorite players statistics. 
+LeBron James Tracker is a web app that will allow users to keep track of LeBron. Users can select the year and view LeBron's stats. User's can also see photos and videos of LeBron. Users should be able to login and register.
 
 
 ## Data Model
 
-The application will store Users, Players and PlayerLists
+The application will store Users, Photos and Videos
 
-* users can have multiple Players(via references)
-* each Player can have multiple stats (by embedding)
+* Stats are supplied (via NBA API)
+* Each Photo and video has description links to allow more information (by embedding)
 
 
 An Example User:
@@ -21,7 +21,6 @@ An Example User:
 {
 username: "anthonycheng",
 hash: // a password hash,
-players: // an array of references to Player documents
 }
 ```
 
@@ -33,9 +32,7 @@ user: // a reference to a User object
 name: "LeBron James",
 ppg: 28,
 reb: 8,
-ast: 7,
-to: 2,
-createdAt: // timestamp
+ast: 7
 }
 ```
 
