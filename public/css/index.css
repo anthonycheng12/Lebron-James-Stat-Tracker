@@ -1,4 +1,4 @@
-h1, h2, label, p, h3 {
+h1, h2, label, p, h3, .error {
   color: lightslategray;
 }
 
