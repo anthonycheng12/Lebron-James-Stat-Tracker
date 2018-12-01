@@ -1,0 +1,8 @@
+<h1>View All LeBron Video Submissions</h1>
+
+{{#each videos as |video|}}
+    <ul id="homeList">
+        <li><a href={{video.url}}>{{video.publisher}}</a> </li>
+        <p>Description: {{video.description}}</p>
+    </ul>
+{{/each}}

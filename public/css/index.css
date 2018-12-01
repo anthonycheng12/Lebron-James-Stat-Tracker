@@ -1,4 +1,4 @@
-h1, h2, label {
+h1, h2, label, p {
   color: lightslategray;
 }
 
@@ -41,4 +41,8 @@ body {
 .contain textarea {
   width: 100%;
   clear: both;
+}
+
+p {
+  font-size: 12px;
 }

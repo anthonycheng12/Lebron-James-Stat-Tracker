@@ -9,6 +9,7 @@ const request = require('request');
 
 const app = express();
 const Photo = mongoose.model('Photo');
+const Video = mongoose.model('Video');
 
 const statsLBJOBJ = {
     "n2003": {"pts":20.9, "reb":5.5, "ast":5.9},
@@ -154,6 +155,43 @@ app.get('/photo/view', (req, res) => {
     }
 });
 
+app.get('/video/view', (req, res) => {
+    if(req.session.user){
+        Video.find((err, videos) => {
+            if(videos.length){
+                res.render('index2', {user:req.session.user, videos: videos});
+            } else {
+                res.render('index2', {user: req.session.user});
+            }
+        });
+    } else {
+        res.redirect('/login');
+    }
+});
+
+app.get('/video/add', (req, res) => {
+    if(req.session.user){
+        res.render('video-add');
+    } else {
+        res.redirect('/login');
+    }
+});
+
+app.post('/video/add', (req, res) => {
+    new Video({
+        publisher: req.body.publisher,
+        url: req.body.url,
+        team: req.body.team,
+        description: req.body.description
+    }).save(function(err) {
+        if(err){
+            res.render('video-add');
+        } else {
+            res.redirect('/video/view');
+        }
+    })
+});
+
 app.get('/photo/add', (req, res) => {
     if(req.session.user){
         res.render('photo-add');
@@ -229,5 +267,10 @@ app.get('/photo/:slug', (req, res) => {
 		res.render('photo-details', {photos: photos});
 	});
 });
+module.exports = {
+    filterCavs: filterCavs,
+    filterHeat: filterHeat,
+    filterLakers: filterLakers
+}
 
 app.listen(process.env.PORT || 3000);

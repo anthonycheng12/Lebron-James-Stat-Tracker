@@ -15,6 +15,13 @@ const User = new mongoose.Schema({
     description: {type: String}
   });
 
+  const Video = new mongoose.Schema({
+    publisher: {type: String},
+    url: {type: String},
+    team: {type: String},
+    description: {type: String}
+  });
+
 // is the environment variable, NODE_ENV, set to PRODUCTION? 
 let dbconf;
 if (process.env.NODE_ENV === 'PRODUCTION') {
@@ -35,6 +42,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
 }
 
 Photo.plugin(URLSlugs('publisher'));
+mongoose.model('Video', Video);
 mongoose.model('User', User);
 mongoose.model('Photo', Photo);
 mongoose.connect(dbconf);
