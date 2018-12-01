@@ -69,10 +69,9 @@ ast: 7
 
 ## Research Topics
 
-* (5 points) Integrate user authentication
-* I will use LoopBack via CLI to create an authentication
-* LoopBack is a highly extensible open source Node.js framework
-* (3 points) Use the NBA JavaScript API to gather statistics
+* (3 points) Unit Testing
+* I will use Mocha to unit test functions
+* (5 points) Use the NBA JavaScript API to gather statistics
 * see <code>https://github.com/bttmly/nba</code>
 
 
@@ -83,6 +82,6 @@ ast: 7
 
 ## Annotations / References Used
 
-1. [LoopBack](https://medium.freecodecamp.org/build-restful-api-with-authentication-under-5-minutes-using-loopback-by-expressjs-no-programming-31231b8472ca)
+1. [Unit Testing](https://www.youtube.com/watch?v=MLTRHc5dk6s)
 2. [NBA API](https://github.com/bttmly/nba) 
 
