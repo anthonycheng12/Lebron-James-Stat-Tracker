@@ -8,13 +8,21 @@
 <body>
 	{{#if user}}
 		<h1>Hello {{user.username}}</h1>
-		<a href ="/player/add" id="link">Add Player</a><br>
-		<a href ="player/list" id="link">Look at List</a><br>
-		<a href="/" id="link">Home</a>
+		<div class="navbar">
+			<a href ="/photo/add" id="link">Add Photo of LeBron</a><br>
+			<a href ="/photo/view" id="link">View Photos of LeBron</a><br>
+			<a href ="/photo/cavs" id="link">View Photos of LeBron on the Cavs</a><br>
+			<a href ="/photo/heat" id="link">View Photos of LeBron on the Heat</a><br>
+			<a href ="/photo/lakers" id="link">View Photos of LeBron on the Lakers</a><br>
+			<a href ="/stats" id="link">View Stats of LeBron</a><br>
+			<a href="/" id="link">Home</a>
+		</div>
 	{{else}}
-		<a href="/login" id="link">Login</a><br>
-		<a href="/register" id="link">Register</a><br>
-		<a href="/" id="link">Home</a>
+		<div class="navbar">
+			<a href="/login" id="link">Login</a><br>
+			<a href="/register" id="link">Register</a><br>
+			<a href="/" id="link">Home</a>
+		</div>
 	{{/if}}
 	{{{body}}}
 </body>

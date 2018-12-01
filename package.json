@@ -17,12 +17,16 @@
   },
   "homepage": "https://github.com/nyu-csci-ua-0480-001-003-fall-2018/anthonycheng12-final-project#readme",
   "dependencies": {
+    "async": "^2.6.1",
     "bcrypt": "^3.0.2",
     "bcryptjs": "^2.4.3",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "hbs": "^4.0.1",
     "mongoose": "^5.3.12",
-    "nba": "^4.5.0"
+    "mongoose-url-slugs": "^1.0.2",
+    "nba": "^4.5.0",
+    "request": "^2.88.0",
+    "result": "^2.0.9"
   }
 }

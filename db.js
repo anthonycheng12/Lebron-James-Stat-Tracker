@@ -1,32 +1,18 @@
 const mongoose = require('mongoose');
+const URLSlugs = require('mongoose-url-slugs');
 
 const User = new mongoose.Schema({
-    // username provided by authentication plugin
-    // password hash provided by authentication plugin
     username: {type: String, required: true},
 	  email: {type: String, required: true},
     password: {type: String, unique: true, required: true},
     lists:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'List', required: false }]
   });
 
-const Player = new mongoose.Schema({
-    firstname: {type: String, required: true},
-    lastname: {type: String, required: true},
-    ppg: {type: String, required: false},
-    reb: {type: String, required: false},
-    ast: {type: String, required: false},
-    stl: {type: String, required: false},
-    blk: {type: String, required: false},
-    tov: {type: String, required: false}
-  }, {
-    _id: true
-  });
-
-const PlayerList = new mongoose.Schema({
-    user: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-    name: {type: String, required: true},
-    createdAt: {type: Date, required: true},
-    players: [Player]
+  const Photo = new mongoose.Schema({
+    publisher: {type: String},
+    url: {type: String},
+    team: {type: String},
+    description: {type: String}
   });
 
 // is the environment variable, NODE_ENV, set to PRODUCTION? 
@@ -48,7 +34,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
  dbconf = 'mongodb://localhost/YOUR_DATABASE_NAME_HERE';
 }
 
+Photo.plugin(URLSlugs('publisher'));
 mongoose.model('User', User);
-mongoose.model('PlayerList', PlayerList);
-mongoose.model('Player', Player);
+mongoose.model('Photo', Photo);
 mongoose.connect(dbconf);

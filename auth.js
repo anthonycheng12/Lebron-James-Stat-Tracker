@@ -10,7 +10,7 @@ const noUser = {message: "USER NOT FOUND"};
 const wrongPW = {message: "PASSWORDS DO NOT MATCH"};
 
 function register(username, email, password, errorCallback, successCallback) {
-  if(username.length >= 8 && password.length >= 8){
+  if(username.length >= 5 && password.length >= 5){
     User.findOne({username: username}, (err, result, count) => {
       if(result){
         errorCallback(alreadyExist);

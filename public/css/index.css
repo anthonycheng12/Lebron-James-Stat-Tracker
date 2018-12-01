@@ -1,0 +1,44 @@
+h1, h2, label {
+  color: lightslategray;
+}
+
+#homeList {
+  list-style: none;
+}
+
+a {
+  color: rgb(233, 108, 108);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+​
+a:hover {
+  text-decoration: underline;
+}
+
+#lbjstat {
+  color: rgb(233, 108, 108);
+}
+
+html {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+  background-image: url("../images/fancy-cushion.png");
+}
+
+.contain {
+  width: 500px;
+  clear: both;
+}
+
+.contain input {
+  width: 100%;
+  clear: both;
+}
+
+.contain textarea {
+  width: 100%;
+  clear: both;
+}

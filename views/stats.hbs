@@ -1,0 +1,31 @@
+{{#if msg}}
+<h2>{{yearPrint}} stats for LeBron</h2>
+<ul id="homeList">
+    <li id="lbjstat">Points: {{tempOBJ.pts}}</li>
+    <li id="lbjstat">Rebounds: {{tempOBJ.reb}}</li>
+    <li id="lbjstat">Assists: {{tempOBJ.ast}}</li>
+</ul>
+{{/if}}
+
+<form method="POST" action="">
+  <select class="selectpicker" name="selectpicker">
+    <option value="n2003">2003</option>
+    <option value="n2004">2004</option>
+    <option value="n2005">2005</option>
+    <option value="n2006">2006</option>
+    <option value="n2007">2007</option>
+    <option value="n2008">2008</option>
+    <option value="n2009">2009</option>
+    <option value="n2010">2010</option>
+    <option value="n2011">2011</option>
+    <option value="n2012">2012</option>
+    <option value="n2013">2013</option>
+    <option value="n2014">2014</option>
+    <option value="n2015">2015</option>
+    <option value="n2016">2016</option>
+    <option value="n2017">2017</option>
+    <option value="n2018">2018</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
