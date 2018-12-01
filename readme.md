@@ -20,6 +20,8 @@ An Example User:
 ```javascript
 {
 username: "anthonycheng",
+email: "ac5751@nyu.edu",
+password: "kept secret",
 hash: // a password hash,
 }
 ```
@@ -42,17 +44,21 @@ ast: 7
 
 ## Wireframes
 
-/players/create - homepage
+/photo/add - add photo of LeBron 
 
-![list create](documentation/1homepage.png)
+![list create](documentation/1add.png)
 
-/players - page for showing all players
+/photo/view - page for showing all photos
 
-![list](documentation/2allPlayers.png)
+![list](documentation/2allPhotos.png)
 
-/players/lebron - page for showing specific stats on your selected player
+/photos/specificPage - page for showing specific photo and details of lebron
 
-![list](documentation/3specificPlayer.png)
+![list](documentation/3specificPhoto.png)
+
+/stats - page for showing stats of LeBron
+
+![list](documentation/4stats.png)
 
 ## Site map
 
@@ -62,10 +68,10 @@ ast: 7
 
 1. as non-registered user, I can register a new account with the site
 2. as a user, I can log in to the site
-3. as a user, I can create a player list
-4. as a user, I can view my player list
-5. as a user, I can add players to my player list
-6. as a user, I can delete players of my list
+3. as a user, I can add a photo
+4. as a user, I can view LeBron's stats
+5. as a user, I can add a video
+6. as a user, I can view LeBron photos of a specific team
 
 ## Research Topics
 
